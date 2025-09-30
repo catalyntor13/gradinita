@@ -11,7 +11,7 @@ import Albinuta from "@/components/ui/albinuta"
 
 export default function Activitati() {
     return (
-        <section id="activitati" className="md:p-20 p-10 bg-[url(/section1.jpg)] bg-no-repeat bg-cover">
+        <section id="activitati" className="md:p-20 p-10 bg-[url(/section3.jpg)] bg-no-repeat bg-cover">
         <div className="container mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp} viewport={{ once: true, margin: "-100px" }}>
             <div className="flex items-center mb-4 justify-center gap-2">

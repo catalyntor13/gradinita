@@ -68,7 +68,7 @@ export default function Footer(){
                 <li>Adresa Gradinita 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
                 <li>Email : gradinitabusybee@yahoo.com</li>
                 <li>Telefon: +40727334412</li>
-                <li>Program: 08:00 - 17:00</li>
+                <li>Program: Luni - Vineri: 8:00 - 17:00</li>
               </ul>
             </div>
           </div>
