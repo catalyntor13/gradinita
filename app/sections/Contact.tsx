@@ -50,7 +50,7 @@ export default function Contact(){
                 ].map((contact, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-4"
+                    className="flex items-center gap-5 "
                     variants={staggerItem}
                     whileHover={{ x: 10 }}
                   >
@@ -59,11 +59,11 @@ export default function Contact(){
                       whileHover={{ scale: 1.1, rotate: 360 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <contact.icon className="w-5 h-5 text-white" />
+                      <contact.icon className="w-6 h-6 text-white" />
                     </motion.div>
-                    <div>
-                      <div className="font-semibold">{contact.title}</div>
-                      <div className="text-muted-foreground">{contact.info}</div>
+                    <div className="w-full text-wrap">
+                      <div className="font-semibold ">{contact.title}</div>
+                      <div className="text-muted-foreground ">{contact.info}</div>
                     </div>
                      
                   </motion.div>

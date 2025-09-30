@@ -20,7 +20,7 @@ export default function Footer(){
             <div>
               <div className="flex items-center gap-3 mb-4">
               
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1">
                   <Albinuta/>
                 <span className="text-[#F3AF51] font-semibold">Gradinita</span><span className="text-[#8B5E4C] font-semibold">Busy Bee</span> 
                 </div>
