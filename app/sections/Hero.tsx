@@ -30,8 +30,8 @@ export default function Hero() {
 
 
          
-         <h1 className={`${rouge.className} text-4xl mb-4 `}>
-              ✨ Gradinita Busy Bee
+         <h1 className={`${rouge.className} text-6xl mt-30 md:my-4 lg:md-8 `}>
+            ✨<span className="text-[#F3AF51]">Gradinita</span> <span className="text-[#8B5E4C]">Busy Bee</span> 
             </h1>
           
       
@@ -48,7 +48,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }} // Apare după text
         >
           <video 
-            className="w-full h-[600px] object-cover object-[75%_25%] " 
+            className="w-full aspect[9/16]  " 
             controls
             loop 
             muted 
@@ -61,13 +61,17 @@ export default function Hero() {
           </div>
           <div className="col-span-2 order-1 md:order-2">
 
-            <h1 className="text-5xl mb-10 font-semibold">Un loc magic unde copiii
+            <h1 className="text-3xl mb-10 font-semibold my-10">Un loc magic unde copiii
 învață prin joacă</h1>
             <motion.p 
-            className="text-lg md:text-2xl text-gray-600 max-w-5xl mb-10"
+            className="text-lg md:text-2xl text-balanced text-gray-600 max-w-7xl mb-10"
             variants={fadeInUp}
           >
-            Oferim un mediu sigur, cald și stimulativ pentru dezvoltarea armonioasă a copilului tău. Cu educatori dedicați și programe inovatoare.
+            Oferim un loc sigur și primitor, unde copilul tău se poate dezvolta frumos și sănătos. La Grădinița Busy Bee, ne-am dorit să creăm mai mult decât o simplă grădiniță: un al doilea „acasă”. Este un loc plin de viață și veselie, unde fiecare copil este încurajat să descopere lumea în ritmul său, fără presiune.
+
+Educatorii noștri sunt oameni calzi și dedicați, care le sunt alături copiilor la fiecare pas. Programele noastre sunt bazate pe joacă, pentru că așa învață ei cel mai bine. Prin activități creative și jocuri în echipă, îi ajutăm să gândească singuri, să își facă prieteni și să se înțeleagă bine cu cei din jur.
+
+Noi credem că fiecare copil este special. De aceea, scopul nostru este să îi dăm încrederea și sprijinul de care are nevoie pentru un start bun în viață. Ne dorim ca de la noi să plece curios, dornic să afle lucruri noi și cu amintiri frumoase, care să îl ajute să iubească învățarea pentru tot restul vieții.
           </motion.p>
              {/* Butonul CTA (Centrat și Animat Separat) */}
         <motion.div

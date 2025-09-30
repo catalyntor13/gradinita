@@ -22,12 +22,12 @@ export default function Footer(){
               
                 <div className="flex items-center gap-3">
                   <Albinuta/>
-                  <span className="font-semibold">Grădinița Busy Bee</span>
+                <span className="text-[#F3AF51] font-semibold">Gradinita</span><span className="text-[#8B5E4C] font-semibold">Busy Bee</span> 
                 </div>
       
               </div>
               <p className="text-muted-foreground text-sm">
-                Un loc magic unde copiii învață prin joacă și se dezvoltă armonios.
+               Oferim un mediu sigur, cald și stimulativ pentru dezvoltarea armonioasă a copilului tău. Cu educatori dedicați și programe inovatoare.
               </p>
             </div>
 
@@ -51,7 +51,7 @@ export default function Footer(){
                 
                 <li className="flex items-center gap-2 mb-3 hover:text-gray-500"><FaInstagram/>Instagram</li>
                 </Link>
-                <Link href='https://tiktok.com/gradinitabusybee'>
+                <Link href='https://www.tiktok.com/@gradinita.busybee'>
                      <li className="flex items-center gap-2 hover:text-gray-500"><FaTiktok/>TikTok</li>
                 </Link>
              
@@ -64,8 +64,8 @@ export default function Footer(){
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Adresa 1: Strada Carol 18, Râmnicu Vâlcea, Romania</li>
-                <li>Adresa 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
+                <li>Adresa Gradinita 1: Strada Carol 18, Râmnicu Vâlcea, Romania</li>
+                <li>Adresa Gradinita 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
                 <li>Email : gradinitabusybee@yahoo.com</li>
                 <li>Telefon: +40727334412</li>
                 <li>Program: 08:00 - 17:00</li>

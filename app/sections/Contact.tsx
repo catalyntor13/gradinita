@@ -23,12 +23,12 @@ export default function Contact(){
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div {...fadeInLeft} viewport={{ once: true, margin: "-100px" }}>
-              <div className="flex mb-4 gap-2 items-center">
+              <div className="flex mb-4 gap-2 items-center justify-center md:justify-start">
                 <Albinuta/>
 <Badge className="bg-secondary text-primary font-semibold text-[1rem]">Contact</Badge>
               </div>
               
-              <h2 className="text-3xl font-bold mb-6 text-balance">Hai să ne cunoaștem!</h2>
+              <h2 className="text-3xl font-bold mb-6 text-balance text-center md:text-left">Hai să ne cunoaștem!</h2>
               <p className="text-muted-foreground mb-8">
                 Suntem aici pentru a răspunde la toate întrebările tale. Programează o vizită și descoperă de ce
                 părinții ne aleg pe noi.
@@ -42,8 +42,8 @@ export default function Contact(){
                 viewport={{ once: true }}
               >
                 {[
-                  { icon: MapPin, title: "Adresa 1", info: "Strada Carol 18, Râmnicu Vâlcea, Romania" },
-                  { icon: MapPin, title: "Adresa 2", info: "Strada General Praporgescu 7, Râmnicu Vâlcea, Romania" },
+                  { icon: MapPin, title: "Adresa Gradinita 1", info: "Strada Carol 18, Râmnicu Vâlcea, Romania" },
+                  { icon: MapPin, title: "Adresa Gradinita 2", info: "Strada General Praporgescu 7, Râmnicu Vâlcea, Romania" },
                   { icon: Phone, title: "Telefon", info: "+40727334412" },
                   { icon: Mail, title: "Email", info: "gradinitabusybee@yahoo.com" },
                   { icon: Clock, title: "Program", info: "Luni - Vineri: 8:00 - 17:00" },
@@ -69,16 +69,16 @@ export default function Contact(){
                   </motion.div>
                 ))}
                  <div>
-                      <h2 className="font-semibold mb-5 text-2xl">Urmareste-ne si pe social media</h2>
-                      <div className="flex gap-5 p-2">
-                        <Link href='http://facebook.com/gradinita.busybee'>
-                        <FaFacebook className="text-[1.5rem] cursor-pointer"/>
+                      <h2 className="font-semibold mt-20 md:mt-10 text-2xl text-center">Urmareste-ne si pe social media</h2>
+                      <div className="flex gap-5 p-2 justify-center mt-10 md:mt-5">
+                        <Link href='https://facebook.com/gradinita.busybee'>
+                        <FaFacebook className="text-[2rem] cursor-pointer "/>
                         </Link>
-                        <Link href='http://instagram.com/gradinita.busybee'>
-                         <FaInstagram className="text-[1.5rem] cursor-pointer"/>
+                        <Link href='https://instagram.com/gradinita.busybee'>
+                         <FaInstagram className="text-[2rem] cursor-pointer"/>
                         </Link>
-                        <Link href='http://tiktok.com/gradinita.busybee'>
-                             <FaTiktok className="text-[1.5rem] cursor-pointer"/>
+                        <Link href='https://www.tiktok.com/@gradinita.busybee'>
+                             <FaTiktok className="text-[2rem] cursor-pointer"/>
                              </Link>
                        
                       

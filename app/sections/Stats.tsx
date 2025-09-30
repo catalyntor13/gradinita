@@ -6,7 +6,7 @@ import { staggerItem } from "@/lib/motion"
 
 export default function Stats() {
     return (
-      <section className="py-16 px-4 ">
+      <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -17,7 +17,7 @@ export default function Stats() {
           >
             {[
               { number: "10+", label: "Ani de experiență" },
-              { number: "200+", label: "Copii fericiți" },
+              { number: "800+", label: "Copii fericiți" },
               { number: "11", label: "Educatori calificați" },
               { number: "98%", label: "Părinți mulțumiți" },
             ].map((stat, index) => (

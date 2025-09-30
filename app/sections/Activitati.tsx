@@ -11,7 +11,7 @@ import Albinuta from "@/components/ui/albinuta"
 
 export default function Activitati() {
     return (
-        <section id="activitati" className="md:p-20 p-10">
+        <section id="activitati" className="md:p-20 p-10 bg-[url(/section1.jpg)] bg-no-repeat bg-cover">
         <div className="container mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp} viewport={{ once: true, margin: "-100px" }}>
             <div className="flex items-center mb-4 justify-center gap-2">
@@ -41,7 +41,7 @@ export default function Activitati() {
                 whileHover={{ y: -5, scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-center p-6 rounded-2xl bg-card border hover:shadow-lg transition-shadow">
+                <div className="text-center p-6 rounded-2xl bg-card shadow-md border hover:shadow-lg transition-shadow">
                   <motion.div
                     className={`w-16 h-16 bg-[#F3AF51] rounded-2xl flex items-center justify-center mx-auto mb-4`}
                     whileHover={{ rotate: 360, scale: 1.1 }}

@@ -27,7 +27,7 @@ export default function Programe() {
           </motion.div>
 
           <motion.div
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-8 "
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -58,8 +58,8 @@ export default function Programe() {
             ].map((program, index) => (
               <motion.div key={index} variants={staggerItem}>
                 <motion.div whileHover={{ y: -10, scale: 1.02 }} transition={{ duration: 0.3 }}>
-                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
-                    <CardContent className="p-6">
+                  <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full ">
+                    <CardContent className="flex flex-col justify-center md:justify-start items-center md:items-start">
                       <motion.div
                         className={`w-12 h-12 bg-[#F3AF51] rounded-xl flex items-center justify-center mb-4`}
                         whileHover={{ rotate: 360, scale: 1.1 }}
@@ -68,7 +68,7 @@ export default function Programe() {
                         <program.icon className={`w-6 h-6 text-${program.color}`} />
                       </motion.div>
                       <h3 className="text-xl font-bold mb-3">{program.title}</h3>
-                      <p className="text-muted-foreground mb-4">{program.description}</p>
+                      <p className="text-muted-foreground text-center md:text-start mb-4">{program.description}</p>
                       <ul className="space-y-2 text-sm">
                         {program.activities.map((activity, actIndex) => (
                           <motion.li

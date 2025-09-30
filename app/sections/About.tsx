@@ -17,13 +17,13 @@ export default function About(){
 const MotionImage = motion(Image)
 
     return (
-        <section id="despre" className="md:p-20 p-8 ">
+        <section id="despre" className="md:p-20 p-8 bg-[url(/section1.jpg)] bg-no-repeat bg-cover ">
         <div className="container mx-auto  ">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInLeft} viewport={{ once: true, margin: "-100px" }}>
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                      <Albinuta/>
-              <Badge className=" bg-secondary text-secondary-foreground font-semibold text-[1rem]">Despre Noi</Badge>
+              <Badge className=" bg-secondary text-secondary-foreground font-semibold text-[1rem] ">Despre Noi</Badge>
               </div>
           
               <h2 className="text-3xl font-bold mb-6 text-balance">
