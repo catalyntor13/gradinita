@@ -54,7 +54,7 @@ export default function Hero() {
           </div>
           <div className="col-span-2 order-1 md:order-2">
 
-            <h1 className="text-4xl mb-5 font-bold my-10">Un loc magic unde copiii
+            <h1 className="text-3xl mb-5 font-bold my-10">Un loc magic unde copiii
 învață prin joacă </h1>
             <motion.p 
             className="text-[1.4rem] text-gray-600 max-w-5xl mb-10"
