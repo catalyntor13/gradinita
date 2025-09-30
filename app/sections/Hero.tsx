@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import scrollToId from "@/lib/scrollToId"
 import { fadeInUp } from "@/lib/motion"
-import Albinuta from "@/components/ui/albinuta"
+
 
 
 export default function Hero() {
@@ -23,31 +23,28 @@ export default function Hero() {
 
 
            
-         <h1 className= 'text-5xl md:text-6xl mt-30 md:my-4 lg:md-8  '>
-         ✨
-           <span className="text-[#F3AF51] mr-3">Gradinita</span><span className="text-[#8B5E4C]">Busy Bee</span> 
-         
-            </h1>
+       <h1 className="text-5xl md:text-6xl lg:txt-8xl mt-30 md:my-4 lg:md-8 font-bold flex flex-col md:flex-row lg:flex-row">
+  <span className="text-[#F3AF51] md:mr-3 ml-0">Gradinita</span>
+  <span className="text-[#8B5E4C]">Busy Bee</span>
+</h1>
+
           
       
         </motion.div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="col-span-1 order-2 md:order-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:mx-auto">
+          <div className="col-span-1 order-2 md:order-1  ">
             {/* Partea de Video (Centrat și Animat) */}
         <motion.div 
-          className="w-full shadow-2xl rounded-xl overflow-hidden"
+          className=" w-full shadow-2xl ml-5 md:ml-0 rounded-xl overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }} // Apare după text
         >
           <video width={260} height={240}
          className="w-full"
-            controls
-            loop 
-            muted 
-            
+            controls 
             src='/gradinita.mp4'
             poster='/video.gif'
           >
@@ -57,7 +54,7 @@ export default function Hero() {
           </div>
           <div className="col-span-2 order-1 md:order-2">
 
-            <h1 className="text-2xl mb-10 font-semibold my-15">Un loc magic unde copiii
+            <h1 className="text-2xl mb-5 font-semibold my-10">Un loc magic unde copiii
 învață prin joacă </h1>
             <motion.p 
             className="text-[1.5rem] text-gray-600 max-w-5xl mb-10"
@@ -76,8 +73,8 @@ Noi credem că fiecare copil este special. De aceea, scopul nostru este să îi 
             transition={{ duration: 0.5, delay: 1 }} // Apare la final
         >
             <Button
-                size="lg" // Buton mare, vizibil
-                className="bg-[#F3AF51] hover:bg-orange-600 text-white text-lg px-10 py-3 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
+                 // Buton mare, vizibil
+                className="bg-[#F3AF51] hover:bg-orange-600 text-white text-[1.5rem] px-10 py-6 md:py-3 rounded-full shadow-xl transition duration-300 transform hover:scale-105"
                 onClick={() => scrollToId('contact', 80, 1200)}
             >
                 Programează o vizită
