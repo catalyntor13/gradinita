@@ -7,13 +7,18 @@ import { motion } from "framer-motion"
 import { staggerContainer } from "@/lib/motion"
 import { fadeInUp } from "@/lib/motion"
 import { staggerItem } from "@/lib/motion"
+import Albinuta from "@/components/ui/albinuta"
 
 export default function Activitati() {
     return (
         <section id="activitati" className="md:p-20 p-10">
         <div className="container mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp} viewport={{ once: true, margin: "-100px" }}>
-            <Badge className="mb-4 bg-primary text-primary-foreground">Activități Speciale</Badge>
+            <div className="flex items-center mb-4 justify-center gap-2">
+              <Albinuta/>
+              <Badge className="bg-secondary text-primary font-semibold text-[1rem] ">Activități Speciale</Badge>
+            </div>
+            
             <h2 className="text-3xl font-bold mb-4 text-balance">Activități care dezvoltă talentele copilului</h2>
           </motion.div>
 
@@ -38,14 +43,14 @@ export default function Activitati() {
               >
                 <div className="text-center p-6 rounded-2xl bg-card border hover:shadow-lg transition-shadow">
                   <motion.div
-                    className={`w-16 h-16 bg-${activity.color}/10 rounded-2xl flex items-center justify-center mx-auto mb-4`}
+                    className={`w-16 h-16 bg-[#F3AF51] rounded-2xl flex items-center justify-center mx-auto mb-4`}
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <activity.icon className={`w-8 h-8 text-${activity.color}`} />
+                    <activity.icon className={`w-8 h-8 text-white`} />
                   </motion.div>
                   <h3 className="font-semibold mb-2">{activity.title}</h3>
-                  <p className="text-sm text-muted-foreground">{activity.description}</p>
+                  <p className="text-sm font-semibold text-muted-foreground">{activity.description}</p>
                 </div>
               </motion.div>
             ))}

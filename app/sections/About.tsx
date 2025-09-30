@@ -2,26 +2,36 @@
 
 
 import { Badge } from "@/components/ui/badge"
-import { Star, Heart, Users, Trophy} from "lucide-react"
+import { Star, Heart, Users} from "lucide-react"
 import { motion } from "framer-motion"
 import { fadeInLeft } from "@/lib/motion"
 import { staggerContainer } from "@/lib/motion"
 import { fadeInRight } from "@/lib/motion"
 import { staggerItem } from "@/lib/motion"
+import Albinuta from "@/components/ui/albinuta"
+import Image from "next/image"
 
 export default function About(){
+
+  // Creezi un motion wrapper pentru Image
+const MotionImage = motion(Image)
+
     return (
-        <section id="despre" className="md:p-20 p-8">
-        <div className="container mx-auto">
+        <section id="despre" className="md:p-20 p-8 ">
+        <div className="container mx-auto  ">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInLeft} viewport={{ once: true, margin: "-100px" }}>
-              <Badge className="mb-4 bg-secondary text-secondary-foreground">Despre Noi</Badge>
+              <div className="flex items-center gap-2 mb-4">
+                     <Albinuta/>
+              <Badge className=" bg-secondary text-secondary-foreground font-semibold text-[1rem]">Despre Noi</Badge>
+              </div>
+          
               <h2 className="text-3xl font-bold mb-6 text-balance">
                 Creăm fundația pentru
                 <span className="text-primary"> viitorul copilului tău</span>
               </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                De peste 15 ani, Grădinița Soarele este un loc unde copiii se simt în siguranță, sunt iubiți și
+              <p className="text-muted-foreground mb-6 leading-relaxed font-semibold">
+                De peste 10 ani, Grădinița Busy Bee este un loc unde copiii se simt în siguranță, sunt iubiți și
                 încurajați să exploreze lumea din jurul lor. Echipa noastră de educatori experimentați folosește metode
                 moderne de învățare prin joacă.
               </p>
@@ -39,16 +49,16 @@ export default function About(){
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-3 font-semibold"
                     variants={staggerItem}
                     whileHover={{ x: 10 }}
                   >
                     <motion.div
-                      className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center"
+                      className="w-8 h-8 bg-[#F3AF51] rounded-full flex items-center justify-center "
                       whileHover={{ scale: 1.1, rotate: 360 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <item.icon className="w-4 h-4 text-primary" />
+                      <item.icon className="w-4 h-4 text-primary text-white" />
                     </motion.div>
                     <span>{item.text}</span>
                   </motion.div>
@@ -56,8 +66,10 @@ export default function About(){
               </motion.div>
             </motion.div>
             <motion.div className="relative" {...fadeInRight} viewport={{ once: true, margin: "-100px" }}>
-              <motion.img
+              <MotionImage
                 src="/img-about.jpg"
+                width={500}
+                height={500}
                 alt="Copii fericiți în sala de clasă"
                 className="rounded-2xl shadow-lg"
                 whileHover={{ scale: 1.02 }}
@@ -71,10 +83,7 @@ export default function About(){
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05, rotate: 2 }}
               >
-                <div className="flex items-center gap-2">
-                  <Trophy className="w-5 h-5 text-primary" />
-                  <span className="font-semibold ">Premiul pentru Excelență în Educație 2025</span>
-                </div>
+                
               </motion.div>
             </motion.div>
           </div>

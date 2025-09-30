@@ -6,7 +6,7 @@ import { staggerItem } from "@/lib/motion"
 
 export default function Stats() {
     return (
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-16 px-4 ">
         <div className="container mx-auto">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -16,14 +16,14 @@ export default function Stats() {
             viewport={{ once: true, margin: "-100px" }}
           >
             {[
-              { number: "15+", label: "Ani de experiență" },
+              { number: "10+", label: "Ani de experiență" },
               { number: "200+", label: "Copii fericiți" },
-              { number: "25", label: "Educatori calificați" },
+              { number: "11", label: "Educatori calificați" },
               { number: "98%", label: "Părinți mulțumiți" },
             ].map((stat, index) => (
-              <motion.div key={index} variants={staggerItem}>
+              <motion.div key={index} variants={staggerItem} >
                 <motion.div
-                  className="text-3xl font-bold text-primary mb-2"
+                  className="text-3xl font-bold text-primary mb-2 "
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ type: "spring", stiffness: 200, delay: index * 0.1 }}

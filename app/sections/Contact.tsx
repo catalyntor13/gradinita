@@ -4,7 +4,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
-import {  Phone, Mail, MapPin, Clock } from "lucide-react"
+import {  Phone, Mail, MapPin, Clock, } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
@@ -12,6 +12,10 @@ import { fadeInLeft } from "@/lib/motion"
 import { staggerContainer } from "@/lib/motion"
 import { fadeInRight } from "@/lib/motion"
 import { staggerItem } from "@/lib/motion"
+import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+import Albinuta from "@/components/ui/albinuta"
+import Link from "next/link"
+
 
 export default function Contact(){
     return (
@@ -19,7 +23,11 @@ export default function Contact(){
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div {...fadeInLeft} viewport={{ once: true, margin: "-100px" }}>
-              <Badge className="mb-4 bg-primary text-primary-foreground">Contact</Badge>
+              <div className="flex mb-4 gap-2 items-center">
+                <Albinuta/>
+<Badge className="bg-secondary text-primary font-semibold text-[1rem]">Contact</Badge>
+              </div>
+              
               <h2 className="text-3xl font-bold mb-6 text-balance">Hai să ne cunoaștem!</h2>
               <p className="text-muted-foreground mb-8">
                 Suntem aici pentru a răspunde la toate întrebările tale. Programează o vizită și descoperă de ce
@@ -34,10 +42,11 @@ export default function Contact(){
                 viewport={{ once: true }}
               >
                 {[
-                  { icon: MapPin, title: "Adresa", info: "Str. Florilor nr. 25, București" },
-                  { icon: Phone, title: "Telefon", info: "0721 123 456" },
-                  { icon: Mail, title: "Email", info: "contact@gradinitasoarele.ro" },
-                  { icon: Clock, title: "Program", info: "Luni - Vineri: 7:00 - 18:00" },
+                  { icon: MapPin, title: "Adresa 1", info: "Strada Carol 18, Râmnicu Vâlcea, Romania" },
+                  { icon: MapPin, title: "Adresa 2", info: "Strada General Praporgescu 7, Râmnicu Vâlcea, Romania" },
+                  { icon: Phone, title: "Telefon", info: "+40727334412" },
+                  { icon: Mail, title: "Email", info: "gradinitabusybee@yahoo.com" },
+                  { icon: Clock, title: "Program", info: "Luni - Vineri: 8:00 - 17:00" },
                 ].map((contact, index) => (
                   <motion.div
                     key={index}
@@ -46,18 +55,36 @@ export default function Contact(){
                     whileHover={{ x: 10 }}
                   >
                     <motion.div
-                      className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center"
+                      className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#F3AF51]"
                       whileHover={{ scale: 1.1, rotate: 360 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <contact.icon className="w-5 h-5 text-primary" />
+                      <contact.icon className="w-5 h-5 text-white" />
                     </motion.div>
                     <div>
                       <div className="font-semibold">{contact.title}</div>
                       <div className="text-muted-foreground">{contact.info}</div>
                     </div>
+                     
                   </motion.div>
                 ))}
+                 <div>
+                      <h2 className="font-semibold mb-5 text-2xl">Urmareste-ne si pe social media</h2>
+                      <div className="flex gap-5 p-2">
+                        <Link href='http://facebook.com/gradinita.busybee'>
+                        <FaFacebook className="text-[1.5rem] cursor-pointer"/>
+                        </Link>
+                        <Link href='http://instagram.com/gradinita.busybee'>
+                         <FaInstagram className="text-[1.5rem] cursor-pointer"/>
+                        </Link>
+                        <Link href='http://tiktok.com/gradinita.busybee'>
+                             <FaTiktok className="text-[1.5rem] cursor-pointer"/>
+                             </Link>
+                       
+                      
+                  
+                      </div>
+                    </div>
               </motion.div>
             </motion.div>
 
@@ -110,6 +137,26 @@ export default function Contact(){
                           />
                         </motion.div>
                       ))}
+
+                       <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        viewport={{ once: true }}
+                      >
+                        <label className="block text-sm font-medium mb-2">Vârsta copilului</label>
+                        <motion.select
+                          className="w-full p-3 border border-input rounded-lg bg-background"
+                          whileFocus={{ scale: 1.02 }}
+                        >
+                          <option>Selectează vârsta</option>
+                          <option>1-3 ani</option>
+                          <option>3-5 ani</option>
+                          <option>4-5 ani</option>
+                          <option>5-6 ani</option>
+       
+                        </motion.select>
+                      </motion.div>
                       
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}

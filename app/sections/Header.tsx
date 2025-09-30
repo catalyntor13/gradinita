@@ -2,11 +2,11 @@
 
 import { useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
 import scrollToId from "@/lib/scrollToId";
 import { Menu } from 'lucide-react';
+import Image from "next/image";
 
  
 export default function Header () {
@@ -21,10 +21,11 @@ export default function Header () {
   ];
   
   return (
-    <header >
-     <div className="flex md:justify-around justify-between p-10 ">
+    <header className="fixed top-0 z-50 bg-white w-full border-b-2 border-shadow-md ">
+     <div className="flex md:justify-around justify-between p-2 ">
         <div>
-          <img
+          <Image
+          alt="logo"
           src='/logo.jpg'
           width={100}
           height={100}
@@ -36,6 +37,7 @@ export default function Header () {
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
+              whileHover={{ scale: 1.15, y: -1 }} 
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}

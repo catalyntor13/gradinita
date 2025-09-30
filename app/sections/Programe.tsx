@@ -8,15 +8,20 @@ import { motion } from "framer-motion"
 import { staggerContainer } from "@/lib/motion"
 import { fadeInUp } from "@/lib/motion"
 import { staggerItem } from "@/lib/motion"
+import Albinuta from "@/components/ui/albinuta"
 
 export default function Programe() {
     return (
        <section id="programe" className="md:p-20 p-8 bg-muted/30">
         <div className="container mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp} viewport={{ once: true, margin: "-100px" }}>
-            <Badge className="mb-4 bg-accent text-accent-foreground">Programele Noastre</Badge>
+            <div className="mb-4 flex items-center justify-center">
+              <Albinuta/>
+            <Badge className=" bg-accent text-accent-foreground font-semibold text-[1rem]">Programele Noastre</Badge>
+            </div>
+            
             <h2 className="text-3xl font-bold mb-4 text-balance">Programe adaptate pentru fiecare vârstă</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-3xl mx-auto">
               Oferim programe educaționale complete, adaptate nevoilor specifice ale fiecărei grupe de vârstă
             </p>
           </motion.div>
@@ -56,7 +61,7 @@ export default function Programe() {
                   <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full">
                     <CardContent className="p-6">
                       <motion.div
-                        className={`w-12 h-12 bg-[#FF6600] rounded-xl flex items-center justify-center mb-4`}
+                        className={`w-12 h-12 bg-[#F3AF51] rounded-xl flex items-center justify-center mb-4`}
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
                       >
@@ -68,7 +73,7 @@ export default function Programe() {
                         {program.activities.map((activity, actIndex) => (
                           <motion.li
                             key={actIndex}
-                            className="flex items-center gap-2"
+                            className="flex items-center gap-2 font-semibold"
                             initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: actIndex * 0.1 }}

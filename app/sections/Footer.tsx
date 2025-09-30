@@ -1,8 +1,10 @@
 "use client"
 
 
-import {  Heart } from "lucide-react"
 import { motion } from "framer-motion"
+import Albinuta from "@/components/ui/albinuta"
+import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer(){
     return (
@@ -17,10 +19,12 @@ export default function Footer(){
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                  <Heart className="w-4 h-4 text-primary-foreground" />
+              
+                <div className="flex items-center gap-3">
+                  <Albinuta/>
+                  <span className="font-semibold">Grădinița Busy Bee</span>
                 </div>
-                <span className="font-bold">Grădinița Busy Bee</span>
+      
               </div>
               <p className="text-muted-foreground text-sm">
                 Un loc magic unde copiii învață prin joacă și se dezvoltă armonios.
@@ -38,22 +42,33 @@ export default function Footer(){
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Informații</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Despre noi</li>
-                <li>Echipa noastră</li>
-                <li>Facilități</li>
-                <li>Testimoniale</li>
+              <h4 className="font-semibold mb-4">Social Media</h4>
+              <ul className="space-y-4 text-sm text-primary">
+                <Link href='https://facebook.com/gradinitabusybee '>
+                   <li className="flex items-center gap-2 mb-3 inline-flex hover:text-gray-500"><FaFacebook/>Facebook</li>
+                   </Link>
+                <Link href='https://instagram.com/gradinitabusybee'>
+                
+                <li className="flex items-center gap-2 mb-3 hover:text-gray-500"><FaInstagram/>Instagram</li>
+                </Link>
+                <Link href='https://tiktok.com/gradinitabusybee'>
+                     <li className="flex items-center gap-2 hover:text-gray-500"><FaTiktok/>TikTok</li>
+                </Link>
+             
+                
+           
+         
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Str. Florilor nr. 25</li>
-                <li>0721 123 456</li>
-                <li>contact@gradinitasoarele.ro</li>
-                <li>Luni - Vineri: 7:00 - 18:00</li>
+                <li>Adresa 1: Strada Carol 18, Râmnicu Vâlcea, Romania</li>
+                <li>Adresa 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
+                <li>Email : gradinitabusybee@yahoo.com</li>
+                <li>Telefon: +40727334412</li>
+                <li>Program: 08:00 - 17:00</li>
               </ul>
             </div>
           </div>
