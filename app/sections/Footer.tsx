@@ -3,7 +3,7 @@
 
 import { motion } from "framer-motion"
 import Albinuta from "@/components/ui/albinuta"
-import { FaTiktok, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaTiktok, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer(){
@@ -52,8 +52,12 @@ export default function Footer(){
                 <li className="flex items-center gap-2 mb-3 hover:text-gray-500"><FaInstagram/>Instagram</li>
                 </Link>
                 <Link href='https://www.tiktok.com/@gradinita.busybee'>
-                     <li className="flex items-center gap-2 hover:text-gray-500"><FaTiktok/>TikTok</li>
+                     <li className="flex items-center gap-2 mb-3 hover:text-gray-500"><FaTiktok/>TikTok</li>
                 </Link>
+                <Link href='https://www.tiktok.com/@gradinita.busybee'>
+                     <li className="flex items-center gap-2 hover:text-gray-500"><FaWhatsapp/>Whatsapp</li>
+                </Link>
+                
              
                 
            

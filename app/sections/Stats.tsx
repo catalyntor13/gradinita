@@ -9,7 +9,7 @@ export default function Stats() {
       <section className="py-16 px-4 bg-muted/30">
         <div className="container mx-auto">
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -17,8 +17,7 @@ export default function Stats() {
           >
             {[
               { number: "10+", label: "Ani de experiență" },
-              { number: "800+", label: "Copii fericiți" },
-              { number: "11", label: "Educatori calificați" },
+              { number: "500+", label: "Copii fericiți" },
               { number: "98%", label: "Părinți mulțumiți" },
             ].map((stat, index) => (
               <motion.div key={index} variants={staggerItem} >
