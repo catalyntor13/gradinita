@@ -56,7 +56,7 @@ export default function Contact(){
 }, [isSubmitted]);
 
    const onSubmit = async (data: FormData) => {
-     setIsSubmitted(true)
+    setIsSubmitted(true)
     setStatus('idle')
 
     try {
@@ -220,7 +220,7 @@ export default function Contact(){
     defaultValue=""
   >
     <option value="" disabled>Selectează vârsta</option>
-    <option value="1-3 ani">1-3 ani</option>
+    <option value="20 luni-3 ani">20 luni -3 ani</option>
     <option value="3-4 ani">3-4 ani</option>
     <option value="4-5 ani">4-5 ani</option>
     <option value="5-6 ani">5-6 ani</option>

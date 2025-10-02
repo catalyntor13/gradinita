@@ -37,7 +37,7 @@ export default function Programe() {
   {[
     {
       icon: Baby,
-      title: "Grupa Baby (1-3 ani)",
+      title: "Grupa Baby (20 luni -3 ani)",
       description: "Primii pași în colectivitate, stimularea curiozității și învățarea treptată a rutinei zilnice.",
       activities: ["Primii pași în explorare și joacă", "Rutine zilnice pentru siguranță și confort", "Exprimarea prin gesturi și sunete"],
       color: "white",
