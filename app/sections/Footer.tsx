@@ -34,10 +34,11 @@ export default function Footer(){
             <div>
               <h4 className="font-semibold mb-4">Programe</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Grupa Mică (2-3 ani)</li>
-                <li>Grupa Mijlocie (3-4 ani)</li>
-                <li>Grupa Mare (4-6 ani)</li>
-                <li>Activități extracurriculare</li>
+                <li>Grupa Baby (1-3 ani)</li>
+                <li>Grupa Mică (3-4 ani)</li>
+                <li>Grupa Mijlocie (4-5 ani)</li>
+                <li>Grupa Mare (5-6 ani)</li>
+               
               </ul>
             </div>
 
@@ -54,7 +55,7 @@ export default function Footer(){
                 <Link href='https://www.tiktok.com/@gradinita.busybee'>
                      <li className="flex items-center gap-2 mb-3 hover:text-gray-500"><FaTiktok/>TikTok</li>
                 </Link>
-                <Link href='https://www.tiktok.com/@gradinita.busybee'>
+                <Link href='https://wa.me/40727334412'>
                      <li className="flex items-center gap-2 hover:text-gray-500"><FaWhatsapp/>Whatsapp</li>
                 </Link>
                 

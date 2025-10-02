@@ -6,7 +6,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
-import {  Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react"
+import {  Phone, Mail, MapPin, Clock, Send, Loader2, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
@@ -19,6 +19,7 @@ import Albinuta from "@/components/ui/albinuta"
 import Link from "next/link"
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import  {sendContactEmail} from '@/lib/send'
 import { z } from "zod";
 
 
@@ -37,7 +38,7 @@ export default function Contact(){
 
   const [status, setStatus] = useState<"idle"|"success"|"error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
-   const[isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>({
     resolver: zodResolver(schema),
@@ -54,30 +55,19 @@ export default function Contact(){
   }
 }, [isSubmitted]);
 
-  async function onSubmit(data: FormData) {
-  setErrorMsg(null);
-  try {
-    const res = await fetch("/api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    const json = await res.json();
-    if (res.ok && json.ok) {
-      setStatus("success");
-      reset();
-    } else {
-      setStatus("error");
-      setErrorMsg(json.error || "Eroare la trimitere");
+   const onSubmit = async (data: FormData) => {
+     setIsSubmitted(true)
+    setStatus('idle')
+
+    try {
+     
+      await sendContactEmail(data);
+      setStatus('success')
+      reset()
+    } catch (error) {
+      setStatus('error')
     }
-  } catch (e) {
-    setStatus("error");
-    setErrorMsg((e as Error).message || "Network error");
   }
-}
-
-
-  
 
     return (
          <section id="contact" className="md:p-20 p-10 bg-muted/30">
@@ -141,7 +131,7 @@ export default function Contact(){
                         <Link href='https://www.tiktok.com/@gradinita.busybee'>
                              <FaTiktok className="text-[2rem] cursor-pointer"/>
                         </Link>
-                          <Link href='https://www.tiktok.com/@gradinita.busybee'>
+                          <Link href='https://wa.me/40727334412'>
                              <FaWhatsapp className="text-[2rem] cursor-pointer"/>
                            </Link>
                        
@@ -277,12 +267,11 @@ export default function Contact(){
   {status === "error" && <p className="text-red-500 text-sm">{errorMsg}</p>}
 </form>
                      ) : (
-
-                      <div className="text-center py-8">
+<div className="text-center py-8">
             <div className="relative mb-6">
-       
+              <CheckCircle className="h-16 w-16 text-green-400 mx-auto animate-bounce" />
               <div className="absolute inset-0 h-16 w-16 text-green-400 animate-ping opacity-20 mx-auto">
-               
+                <CheckCircle className="h-16 w-16" />
               </div>
             </div>
             <h3 className="text-2xl font-bold text-green-400 mb-2">Mesaj trimis cu succes!</h3>

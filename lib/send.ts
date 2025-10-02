@@ -1,4 +1,4 @@
-// lib/send.ts
+"use server"
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -13,8 +13,8 @@ type Payload = {
 };
 
 export async function sendContactEmail({ name, telefon, email, childAge, message }: Payload) {
-  if (!process.env.RESEND_API_KEY) throw new Error("Lipsește RESEND_API_KEY în .env");
-  if (!MailContact) throw new Error("Lipsește EMAIL_RESEND în .env");
+  if (!process.env.RESEND_API_KEY) throw new Error("Lipsește RESEND_API_KEY");
+  if (!MailContact) throw new Error("Lipsește EMAIL_RESEND");
 
   try {
     return await resend.emails.send({

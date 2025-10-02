@@ -38,7 +38,7 @@ export default function Programe() {
     {
       icon: Baby,
       title: "Grupa Baby (1-3 ani)",
-      description: "Adaptare treptată, dezvoltarea independenței și a abilităților sociale de bază",
+      description: "Primii pași în colectivitate, stimularea curiozității și învățarea treptată a rutinei zilnice.",
       activities: ["Activități senzoriale", "Jocuri de socializare", "Dezvoltarea limbajului"],
       color: "white",
     },
