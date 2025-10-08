@@ -66,6 +66,12 @@ export default function Contact(){
       reset()
     } catch (error) {
       setStatus('error')
+      if (error instanceof Error) {
+      setErrorMsg(error.message); // Folosește mesajul din obiectul Error
+      console.error("Eroare la trimitere email:", error); // Opțional: loghează eroarea
+    } else {
+      setErrorMsg('A apărut o eroare necunoscută.');
+    }
     }
   }
 
@@ -275,7 +281,7 @@ export default function Contact(){
               </div>
             </div>
             <h3 className="text-2xl font-bold text-green-400 mb-2">Mesaj trimis cu succes!</h3>
-            <p className="text-gray-300">Îți voi răspunde în cel mai scurt timp posibil.</p>
+            <p>Îți vom răspunde în cel mai scurt timp posibil.</p>
           </div>
         )}
                      
@@ -283,6 +289,8 @@ export default function Contact(){
 
                   </CardContent>
                 </Card>
+
+            
               </motion.div>
             </motion.div>
           </div>

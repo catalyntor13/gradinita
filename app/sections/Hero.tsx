@@ -10,7 +10,7 @@ export default function Hero() {
 
 
   return (
-    <section id="hero" className="bg-white py-20 md:p-40 bg-[url(/section2.jpg)] bg-no-repeat bg-cover">
+    <section id="hero" className="bg-white sm:p-20 lg:p-30  bg-[url(/section2.jpg)] bg-no-repeat bg-cover">
       <div className="container mx-auto px-4 flex flex-col items-center text-center gap-10">
         
         {/* Partea de Text (Centrat și Animat) */}
@@ -23,8 +23,8 @@ export default function Hero() {
 
 
            
-       <h1 className="text-5xl md:text-6xl lg:txt-8xl mt-30 md:my-4 lg:md-8 font-bold flex flex-col md:flex-row lg:flex-row">
-  <span className="text-[#F3AF51] md:mr-3 ml-0">Gradinita</span>
+       <h1 className="sm:mt-20 mt-40 lg:mb-5 flex flex-col gap-2 lg:gap-0 font-bold lg:flex-row text-5xl sm:text-6xl lg:text-6xl">
+  <span className="text-[#F3AF51] md:mr-3 ml-0">Grădinița</span>
   <span className="text-[#8B5E4C]">Busy Bee</span>
 </h1>
 
@@ -33,16 +33,16 @@ export default function Hero() {
         </motion.div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:mx-auto">
-          <div className="col-span-1 order-2 md:order-1  ">
+        <div className="flex flex-col flex-col-reverse lg:flex-row gap-10 items-center">
+          <div className="1">
             {/* Partea de Video (Centrat și Animat) */}
         <motion.div 
-          className=" w-full shadow-2xl ml-5 md:ml-0 rounded-xl overflow-hidden"
+          className="w-full shadow-2xl rounded-xl overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }} // Apare după text
         >
-          <video width={260} height={240}
+          <video width={120} height={120} 
          className="w-full"
             controls 
             src='/gradinita.mp4'
@@ -52,12 +52,12 @@ export default function Hero() {
           </video>
         </motion.div>
           </div>
-          <div className="col-span-2 order-1 md:order-2">
+          <div className="w-full h-full">
 
             <h1 className="text-3xl mb-5 font-bold my-10">Un loc magic unde copiii
 învață prin joacă </h1>
             <motion.p 
-            className="text-[1.4rem] text-gray-600 max-w-5xl mb-10"
+            className="text-[1.5rem] text-gray-600 max-w-6xl mb-10"
             variants={fadeInUp}
           >
             Oferim un loc sigur și primitor, unde copilul tău se poate dezvolta frumos și sănătos. La Grădinița Busy Bee, ne-am dorit să creăm mai mult decât o simplă grădiniță: un al doilea „acasă”. Este un loc plin de viață și veselie, unde fiecare copil este încurajat să descopere lumea în ritmul său, fără presiune.

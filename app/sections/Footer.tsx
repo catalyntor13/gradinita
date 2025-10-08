@@ -20,9 +20,9 @@ export default function Footer(){
             <div>
               <div className="flex items-center gap-3 mb-4">
               
-                <div className="flex items-center gap-1">
+                <div className="flex items-center sm:flex-col lg:flex-row gap-1">
                   <Albinuta/>
-                <span className="text-[#F3AF51] font-semibold">Gradinita</span><span className="text-[#8B5E4C] font-semibold">Busy Bee</span> 
+                <span className="text-[#F3AF51] font-semibold">Grădinița</span><span className="text-[#8B5E4C] font-semibold">Busy Bee</span> 
                 </div>
       
               </div>
@@ -69,8 +69,8 @@ export default function Footer(){
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Adresa Gradinita 1: Strada Carol 18, Râmnicu Vâlcea, Romania</li>
-                <li>Adresa Gradinita 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
+                <li>Adresa Grădinița 1: Strada Carol 18, Râmnicu Vâlcea, Romania</li>
+                <li>Adresa Grădinița 2: Strada General Praporgescu 7, Râmnicu Vâlcea, Romania</li>
                 <li>Email : gradinitabusybee@yahoo.com</li>
                 <li>Telefon: +40727334412</li>
                 <li>Program: Luni - Vineri: 8:00 - 17:00</li>
@@ -79,7 +79,7 @@ export default function Footer(){
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Grădinița Busy Bee. Toate drepturile rezervate.</p>
+            <p className="flex flex-col gap-2">&copy; 2025 Grădinița Busy Bee. <span>Designed by IDToro, toate drepturile rezervate</span></p>
           </div>
         </div>
       </motion.footer>

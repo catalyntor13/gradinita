@@ -19,24 +19,25 @@ const MotionImage = motion(Image)
     return (
         <section id="despre" className="md:p-20 p-8 bg-[url(/section1.jpg)] bg-no-repeat bg-cover ">
         <div className="container mx-auto  ">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-center lg:flex-row max-w-7xl gap-10">
             <motion.div {...fadeInLeft} viewport={{ once: true, margin: "-100px" }}>
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                      <Albinuta/>
               <Badge className=" bg-secondary text-secondary-foreground font-semibold text-[1rem] ">Despre Noi</Badge>
               </div>
           
-              <h2 className="text-3xl font-bold mb-6 text-balance">
+              <h2 className="text-2xl text-center lg:text-start lg:text-3xl font-bold mb-6 text-balance">
                 Creăm fundația pentru
                 <span className="text-primary"> viitorul copilului tău</span>
               </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed font-semibold">
+              <p className="text-muted-foreground text-center lg:text-start mb-6 leading-relaxed font-semibold">
                 De peste 10 ani, Grădinița Busy Bee este un loc unde copiii se simt în siguranță, sunt iubiți și
                 încurajați să exploreze lumea din jurul lor. Echipa noastră de educatori experimentați folosește metode
                 moderne de învățare prin joacă.
               </p>
+              <div className="flex justify-center lg:justify-start">
               <motion.div
-                className="space-y-4"
+                className="flex flex-col gap-4 "
                 variants={staggerContainer}
                 initial="initial"
                 whileInView="animate"
@@ -64,13 +65,14 @@ const MotionImage = motion(Image)
                   </motion.div>
                 ))}
               </motion.div>
+              </div>
             </motion.div>
-            <motion.div className="relative" {...fadeInRight} viewport={{ once: true, margin: "-100px" }}>
+            <motion.div className="relative" {...fadeInRight} >
               <MotionImage
                 src="/img-about.jpg"
-                width={500}
+                width={1500}
                 height={500}
-                alt="Copii fericiți în sala de clasă"
+                alt="Copii fericiți în sala de clasă la Grădinița Busy Bee"
                 className="rounded-2xl shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}

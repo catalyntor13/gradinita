@@ -18,7 +18,7 @@ export async function sendContactEmail({ name, telefon, email, childAge, message
 
   try {
     return await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Contact Form <contact@gradinitabusybee.ro>",
       to: [MailContact],
       replyTo: email,
       subject: `Cerere vizită de la ${name}`,

@@ -28,7 +28,7 @@ export default function Programe() {
           </motion.div>
 
          <motion.div
-  className="grid md:grid-cols-4 gap-7 items-stretch"
+  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 items-stretch"
   variants={staggerContainer}
   initial="initial"
   whileInView="animate"
